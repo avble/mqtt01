@@ -1,0 +1,28 @@
+1) How to build the program 
+1.1. Build mosquitto server 
+$ cd mosquitto/mosquitto-1.4.2
+$ ./mymake.sh
+$ sudo make install
+
+1.2. Build mosquitto python client 
+$ cd mqtt_python
+$ make 
+$ sudo make install 
+
+2) Getting started 
+2.1 The scriber will receive the message, which is published by a publisher 
+2.1.1 Steps to reproduce 
++ Run mosquitto server
+$ mosquitto 
+
++ Run mosquitto scriber 
+$ cd mqtt_python/examples
+$ python sub.py
+
+
++ Run mosquitto publisher  
+$ mosquitto_pub -t  switches/kitchen_lights/status -m "on"
+
+2.1.2. Analyse how it works 
+T.B.D 
+
